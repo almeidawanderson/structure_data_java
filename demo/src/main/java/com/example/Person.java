@@ -22,10 +22,6 @@ public class Person {
 
     Person person1 = new Person(name, age, cpf, rg, address, phone, email);
 
-   
-    
-
-
     }
     
 

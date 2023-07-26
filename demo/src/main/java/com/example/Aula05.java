@@ -10,7 +10,7 @@ public class Aula05 {
         vetor.add("Estrutura de Dados");
         vetor.add("em Java");
 
-        System.out.println(vetor.search(1));
+        System.out.println(vetor);
     }
     
 }

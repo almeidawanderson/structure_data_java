@@ -1,7 +1,4 @@
 package com.example;
-
-import java.util.Arrays;
-
 public class Vetor {
     private String[] elementos;
     private int tamanho;
@@ -15,13 +12,25 @@ public class Vetor {
         return this.tamanho;
     }
 
-    public String search(int position) {
+    /*public String search(int position) {
         if(!(position >= 0 && position < tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
         }
 
         return this.elementos[position];
-    }
+    }*/
+
+    public boolean search(String elemento) {
+        for(int i = 0; i < this.tamanho; i++) {
+            if(this.elementos[i].equals(elemento)) {
+                return true;
+            }
+        }
+        return false;
+    } 
+
+    
+
 
    /*/  public String toString() {
         return Arrays.toString(elementos);
