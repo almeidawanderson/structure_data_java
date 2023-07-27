@@ -20,13 +20,13 @@ public class Vetor {
         return this.elementos[position];
     }*/
 
-    public boolean search(String elemento) {
+    public int search(String elemento) {
         for(int i = 0; i < this.tamanho; i++) {
             if(this.elementos[i].equals(elemento)) {
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
     } 
 
     
@@ -73,5 +73,26 @@ public class Vetor {
         }
         return false;    
     }
+
+
+    // algoritmo de busca sequencial:
+
+    public boolean adiciona(int position, String elemento) {
+        if(!(position >= 0 && position < tamanho)) {
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        // mover todos os  elementos:
+        for(int i = this.tamanho - 1; i >= position; i--) {
+            this.elementos[i + 1] = this.elementos[i];
+        }   
+        
+        this.elementos[position] = elemento;
+        this.tamanho++;
+        
+        return false;
+
+    }
+
+    
 }
 
